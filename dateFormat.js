@@ -1,5 +1,5 @@
-var shortMonthNames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-var longMonthNames = ["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];
+var shortMonthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var longMonthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 var currentChar = '';
 var nextChar = '';
 var pattern = '';
