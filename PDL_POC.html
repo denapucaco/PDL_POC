@@ -49,8 +49,8 @@
 	var jSONObj = {};
 	var baseUrl="http://www.test.blackeagle.boxuk.net/en";
 	
-	// xhr.setRequestHeader();
-	// xhr.setRequestHeader();
+	xhr.setRequestHeader("X-Api-Key", "3e6a9044b5c147f38b892e1dd16ba8268b2853e7");
+	xhr.setRequestHeader("X-Api-Id", "552e470436414d9f1d8b4570");
 	
 	xhr.onload = function() {
 
@@ -95,8 +95,7 @@
 		for (var doc in dataMap){
 			sortable.push([doc, dataMap[doc]]); 
 		}
-		sortable.sort(function(a, b) {
-			return  a[1].title - b[1].title}); 
+		sortable.sort(function(a, b) {return  a[1].title - b[1].title}); 
 		var result=jSONObj["results"];
 		document.getElementById("p"+50).innerHTML="<table border='2'><tr><td>Total no of Records :: "+totalDocuments+"</td></tr></table>";
 		var i =10;

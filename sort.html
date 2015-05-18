@@ -1,0 +1,63 @@
+
+
+
+<div id="p0"></div>
+<div id="p1"></div>
+<div id="p2"></div>
+<div id="p3"></div><BR/><BR/>
+<div id="p4"></div>
+<div id="p5"></div>
+<div id="p6"></div>
+<div id="p7"></div>
+<div id="p8"></div>
+<div id="p9"></div>
+
+
+<script>
+
+var otherShelfRecords= [];
+
+pushInShelf(otherShelfRecords,0,'Application Note: Boost DC/DC with Ultra-Low Shutdown Current (Rev. A)');
+pushInShelf(otherShelfRecords,3,'Application Note: AES128 ? A C Implementation for Encryption and Decryption (Rev. A)');
+pushInShelf(otherShelfRecords,2,'Application Note: Choosing an Ultra Low-Power MCU');
+pushInShelf(otherShelfRecords,1,'Application Note: 1.8V ? 5.5V Input, High-Efficiency DCDC Converter Reference Design for MSP430 (Rev. B)');
+
+function pushInShelf(shelf,i,title){
+	var fileDetails={};
+	fileDetails['title']=title;
+	fileDetails['language']='language '+i;
+	fileDetails['type']='type '+i;
+	fileDetails['size']='size '+i;
+	fileDetails['extension']='extension '+i;
+	shelf.push(fileDetails);
+}
+
+
+r=0;
+for(var s=0;s<otherShelfRecords.length;s++){
+	var obj=otherShelfRecords[s];
+	document.getElementById("p"+r).innerHTML="<a href='"+otherShelfRecords[s].title+"'>"+otherShelfRecords[s].title+"</a>";	
+	r++;
+}
+
+function sortData(arrayList) {
+	arrayList.sort(function(a, b){
+	 if (a.title < b.title){ //sort string ascending
+	  return -1 
+	  }
+	 if (a.title > b.title){
+	  return 1
+	  }
+	 return 0 //default return value (no sorting)
+	});
+}
+
+sortData(otherShelfRecords);
+
+for(var s=0;s<otherShelfRecords.length;s++){
+	var obj=otherShelfRecords[s];
+	document.getElementById("p"+r).innerHTML="<a href='"+otherShelfRecords[s].title+"'>"+otherShelfRecords[s].title+"</a>";	
+	r++;
+}
+
+</script>
